@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+
+<script>
+
+app = angular.module('sebPresApp', []);
+
+app.controller('sebPresCtrl', function($scope, $interval) {
+	var updateTime;
+	$scope.time = 0;
+
+	$scope.seconds = "00";
+	$scope.minutes = "00";
+	
+	$interval(function() {
+		$scope.time += 1;
+
+		$scope.seconds = $scope.time % 60;
+		$scope.minutes = ($scope.time - $scope.seconds) / 60;
+
+		if($scope.seconds < 10) {
+			$scope.seconds = "0" + $scope.seconds;
+		}
+
+		if($scope.minutes < 10) {
+			$scope.minutes = "0" + $scope.minutes;
+		}
+	}, 1000)
+});
+
+</script>
+
+<style>
+#timer {
+	font-size: 25vw;
+	height: 100vh;
+	margin: 0 auto;
+	text-align: center;
+	font-family: monospace;
+	line-height: 100vh;
+}
+</style>
+
+<title>Seb's Presentation Timer</title>
+</head>
+
+<body ng-app="sebPresApp">
+	<div ng-controller="sebPresCtrl" id="timer">
+		{{minutes}}:{{seconds}}
+	</div>
+</body>
+
+</html>

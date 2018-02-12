@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+<title>CSS Layout</title>
+
+<style>
+
+body {
+	margin: 0;
+}
+
+header, main, aside, footer, h1 {
+	margin: 0;
+}
+
+header, footer {
+	width: 100%;
+	max-width: 900px;
+	clear: both;
+}
+
+header {
+	background: tomato;
+	height: 200px;
+}
+
+header h1 {
+	line-height: 200px;
+}
+
+main h1, aside h1 {
+	line-height: 300px;
+}
+
+main {
+	background: orange;
+	max-width: 600px;
+	width: 67%;
+	float: left;
+}
+
+aside {
+	background: MediumSeaGreen;
+	max-width: 300px;
+	width: 33%;
+	float: left;
+}
+
+footer {
+	background: SlateBlue;
+}
+
+footer h1 {
+	line-height: 100px;
+}
+
+h1 {
+	text-align: center;
+}
+
+</style>
+
+<head>
+
+<body>
+
+<header>
+	<h1>Header</h1>
+</header>
+
+<main>
+	<h1>Main content</h1>
+</main>
+
+<aside>
+	<h1>Sidebar</h1>
+</aside>
+
+<footer>
+	<h1>Footer</h1>
+</footer>
+
+</body>
+
+</html>
