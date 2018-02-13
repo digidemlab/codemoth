@@ -1,0 +1,6 @@
+Windows:
+* Lista mappar och filer: dir
+* Byt mapp (Change Directory): cd [mappnamn]
+* Gå upp en mapp: cd..
+* Skapa mapp (""-tecken om du ska ha blanksteg i mappnamnet): mkdir [mappnamn]
+* Ta bort mapp: rmdir [mappnamn]
