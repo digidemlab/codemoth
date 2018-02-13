@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+<title>JavaScript introduktionsexempel</title>
+
+<script>
+var changeColor = function () {
+	var color = "#", possible = "0123456789ABCDEF";
+
+	for (var i=0; i < 6; i++) {
+		color += possible.charAt(Math.floor(Math.random() * possible.length));
+	}
+
+	document.getElementById("rubrik").style.color = color;
+};
+</script>
+<head>
+
+<body>
+
+<h1 id="rubrik">En rubrik</h1>
+
+<button type="button" onclick="changeColor()">Ändra färg på rubriken!</button>
+
+</body>
+
+</html>

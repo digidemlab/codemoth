@@ -4,3 +4,12 @@ Windows:
 * Gå upp en mapp: cd..
 * Skapa mapp (""-tecken om du ska ha blanksteg i mappnamnet): mkdir [mappnamn]
 * Ta bort mapp: rmdir [mappnamn]
+* Byt namn på mapp eller fil: rename [gammalt namn] [nytt namn]
+
+Unix (Linux och Mac):
+* Lista mappar och filer: ls
+* Byt mapp (Change Directory): cd [mappnamn]
+* Gå upp en mapp: cd .. 
+* Skapa mapp (""-tecken om du ska ha blanksteg i mappnamnet): mkdir [mappnamn]
+* Ta bort mapp: rmdir [mappnamn]
+* Byt namn på mapp eller fil: mv [gammalt namn] [nytt namn]

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+<title>JavaScript introduktionsexempel</title>
+
+<script>
+var product="", bought=[], buy, haveEggs=true;
+
+buy = function(n,p=product) {
+	var i;
+	product = p;
+
+	for(i=0; i<n; i++) {
+		bought.push(product);
+	}
+}
+
+buy(2, "milk");
+if(haveEggs) {
+	buy(10);
+}
+
+console.log(bought);
+
+</script>
+<head>
+
+<body>
+
+</body>
+
+</html>
