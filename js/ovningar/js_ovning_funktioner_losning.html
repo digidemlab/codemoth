@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>JavaScript Övning Funktioner</title>
+
+<script>
+var skrivUtNamn = function () {
+	loopaNamn(hamtaNamn(), hamtaNamnElement());
+};
+
+var hamtaNamnElement = function () {
+	return document.getElementsByClassName("namn");
+}
+
+var hamtaNamn = function () {
+	return document.getElementById("namn").value;
+}
+
+var baklanges = function (str) {
+	return str.split("").reverse().join("");
+}
+
+var loopaNamn = function (namn, namnElement) {
+	for (var el of namnElement) {
+		el.innerHTML = namn;
+	}
+}
+
+var skrivUtNamnBaklanges = function () {
+	loopaNamn(baklanges(hamtaNamn()), hamtaNamnElement());
+}
+
+var konsollNamn = function () {
+	console.log(hamtaNamn());
+}
+
+var konsollNamnBaklanges = function () {
+	console.log(baklanges(hamtaNamn()));
+}
+</script>
+
+<head>
+
+<body>
+
+<input type="text" id="namn">
+
+<p>Hej <span class="namn">[namn]</span>!</p>
+
+<p><span class="namn">[namn]</span> är ett fint namn.</span></p>
+
+<button type="button" onclick="skrivUtNamn()">Skriv ut namnet</button>
+<button type="button" onclick="skrivUtNamnBaklanges()">Skriv ut namnet baklänges</button>
+<button type="button" onclick="konsollNamn()">Skriv ut namnet i konsollen</button>
+<button type="button" onclick="konsollNamnBaklanges()">Skriv ut namnet i konsollen baklänges</button>
+
+</body>
+
+</html>
