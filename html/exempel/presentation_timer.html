@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
 
@@ -15,7 +16,7 @@ app.controller('sebPresCtrl', function($scope, $interval) {
 
 	$scope.seconds = "00";
 	$scope.minutes = "00";
-	
+
 	$interval(function() {
 		$scope.time += 1;
 
