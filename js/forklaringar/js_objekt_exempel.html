@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+
+<script>
+
+var createPerson = function (firstname, lastname) {
+	return {
+		firstname: firstname,
+		lastname: lastname,
+		fullname: function() {
+			return this.firstname + " " + this.lastname
+		}
+	}
+}
+
+var sebastian = createPerson("Sebastian", "Everett Eriksson")
+
+var skrivUtNamn = function () {
+	document.getElementById("firstname").innerHTML = sebastian.firstname
+	document.getElementById("lastname").innerHTML = sebastian.lastname
+	document.getElementById("fullname").innerHTML = sebastian.fullname()
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Förnamnet</h1>
+<div id="firstname">
+</div>
+
+<h1>Efternamnet</h1>
+<div id="lastname">
+</div>
+
+<h1>Hela namnet</h1>
+<div id="fullname">
+</div>
+
+<button onclick="skrivUtNamn()">Skriv ut namn!</button>
+
+</body>
+
+</html>
