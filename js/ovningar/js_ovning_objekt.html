@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>JavaScript Övning: Objekt</title>
+
+<script>
+var main = function() {
+
+	var skapaPerson = function(namn, alder) {
+		return {
+			namn: namn,
+			alder: alder
+		}
+	}
+
+	var person = skapaPerson("Sebastian", 24)
+
+	console.log(person.namn)
+	console.log(person.alder)
+
+};
+</script>
+
+<head>
+
+<body>
+
+<button type="button" onclick="main()">Kör skriptet</button>
+
+</body>
+
+</html>

@@ -9,7 +9,7 @@ var createPerson = function (firstname, lastname) {
 	return {
 		firstname: firstname,
 		lastname: lastname,
-		fullname: function() {
+		get fullname() {
 			return this.firstname + " " + this.lastname
 		}
 	}
@@ -20,7 +20,7 @@ var sebastian = createPerson("Sebastian", "Everett Eriksson")
 var skrivUtNamn = function () {
 	document.getElementById("firstname").innerHTML = sebastian.firstname
 	document.getElementById("lastname").innerHTML = sebastian.lastname
-	document.getElementById("fullname").innerHTML = sebastian.fullname()
+	document.getElementById("fullname").innerHTML = sebastian.fullname
 }
 </script>
 
